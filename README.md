@@ -8,7 +8,7 @@
 --->
  
 ## Introduction 
-In this guide, we will create our own custom classifier and a Node-RED application using Watson visual recognition on IBM Cloud.
+In this guide, we will create our own custom classifier and a Node-RED application using Watson visual recognition on IBM Cloud. 
 
 #### Prerequisites
 - Register on IBM Cloud at https://bluemix.net
@@ -96,7 +96,7 @@ Let's create our own classifier by clicking in "Create Classifier".
  
  ![](/screenshots/Picture8.png?raw=true)
  
-Once that's done download the training data located in the "training material" folder. Download the .zip files from the sample you are planning on using (Bluemix logo, Angry Birds or Pizza).
+Once that's done download the training data located in the "training material" folder. Download the .zip files. As you can see we are going to train Watson to recognize Angry Birds characters. 
 
 Name your classifier for example "AngryBirds" and create three classes named "Red", "Blue" and "Yellow". For the negative class you can use the Pigs.zip file.
 
@@ -205,7 +205,7 @@ msg.payload="Watson says that is a/an: \n ";
     return msg;
 ```
 
-5.	To see the results of the image analysis in the debug tab add a debug node.   This node doesn't need any configuring. 
+5.	To see the results of the image analysis in the debug tab add a debug node. This node doesn't need any configuring. 
 
 6.	The flow is now complete. Make sure that all nodes are connected then click 'Deploy' in the top right corner on the screen.  
 7.	The  flow should now look like this.
@@ -217,7 +217,7 @@ Click the button to the right of the inject node. To see the results of the anal
 ![](/screenshots/Picture25.png?raw=true)
  
 In order to make the lab easier we are going to import the rest of the code. 
-You can get the complete Node-RED flow from the **Node-RED-VisualRecognition-flow.txt**.
+You can get the complete Node-RED flow from the **mimmitkoodaa_visualRecognition_flow.txt**.
 
 Import the flow by simply clickcing on the 3 white lines on the top right corner of the Node-RED window.  Import - Clipboard - and paste the text you copied from above. 
 
@@ -232,7 +232,7 @@ Edit the Visual Recognition nodes with your own credentials (API Key).
 Now feel free to find you own images and add them to the different inject nodes to either classify the image, recognize the text in and image or detect faces. 
  
 ## Step 5. Test your customized classifier
-Same way you imported the code in the previous step, copy the following text and import it in Node-RED. In this case use **NodeRED-CustomClassifier.txt**
+Same way you imported the code in the previous step, copy the following text and import it in Node-RED. In this case use **mimmitkoodaa_customClassifier_flow.txt**
 
 We should have the next flow:
  
@@ -250,22 +250,37 @@ Edit the blue timestamp/inject node with the image URL you want to run through t
 
 
 ## Step 6. Create your webapp (UI)
+First we will add some new nodes to our palette. 
 
+In the Node-RED window click on the three lines on the top right corner and in the menu, click on the "Manage palette". This will open the node menu where you can add new nodes to your application. You will see the nodes that are installed by default and if you go to the 'install' tab you can search for any node package and add it directly to your app.
+                  
 
-## Step 7. Other ways to train Watson (Optional)
-In this workshop we have used the Node-RED application to train Watson, but there are other ways to do this. 
+Search for the dashboard nodes by writing 'dashboard'. This will return multiple node packages, you need to install the package 'node-red-dashboard'. Find it in the search results and click on install. 
 
-- Watson API explorer
-https://watson-api-explorer.mybluemix.net/apis/visual-recognition-v3 
-Probably the easiest way to train Watson! 
-Create an IBM Cloud account, create a visual recognition service to get the credentials and then in the API explorer just upload your images and write your credentials to train your custom classifiers. 
-Quick and no coding needed! 
+This will prompt a window to confirm the installation. Click on install and wait few minutes, the application may require a restart. Click "Done" to close the left side menu. 
 
--  Command line 
-https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/ 
-Explore the command line options and how to add Watson visual recognition capabilities to your applciations. Check the guide on how to do this in Curl, Python, Java and Node. 
+After few minutes you will see the new nodes in your Node-RED palette. 
 
--  npm package 
-https://www.npmjs.com/package/watson-visual-recognition-utils 
-Command Line Interface and NPM module for easily creating/updating Watson Visual Recognition customer classifiers.
+Same way you imported the code in the previous steps, copy the following text and import it in Node-RED. In this case use **mimmitkoodaa_UI.txt**
+
+We added the UI flow:
+
+ ![](/screenshots/Picture30.png?raw=true)
+ 
+ ## Step 7. Check your webapp! 
+The dashboard nodes added an UI to our Node-RED application. To access the UI go to:
+
+http://yourAppName.mybluemix.net/ui - US South
+
+Remember that if you are in UK, Germany Sydney the addredd will look slightly different:
+http://yourAppName.eu-gb.mybluemix.net/ui - UK
+
+http://yourAppName.eu-de.mybluemix.net/ui - Germany
+
+http://yourAppName.au-syd.mybluemix.net/ui - Sydney
+
+Awesome,you web app is ready! Play with the visual recognition classifier using the UI.
+Enter the image URL and choose default classifier or custom and check the results!
+
+ ![](/screenshots/Picture31.png?raw=true)
 
