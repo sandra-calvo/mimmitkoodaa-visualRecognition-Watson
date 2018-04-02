@@ -285,4 +285,7 @@ Play with the visual recognition classifier using the UI.
 Enter the image URL and choose default classifier or custom and check the results!
 
  ![](/screenshots/Picture31.png?raw=true)
+ 
+ # Summary
+ In this lab you created a custom classifier using Watson Visual Recognition API and exposed your custom classifier through a web app using Node-RED. 
 
