@@ -279,7 +279,9 @@ http://yourAppName.eu-de.mybluemix.net/ui - Germany
 
 http://yourAppName.au-syd.mybluemix.net/ui - Sydney
 
-Awesome,you web app is ready! Play with the visual recognition classifier using the UI.
+Awesome, you web app is ready! :+1:
+
+Play with the visual recognition classifier using the UI.
 Enter the image URL and choose default classifier or custom and check the results!
 
  ![](/screenshots/Picture31.png?raw=true)
