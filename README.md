@@ -86,7 +86,11 @@ Now that you have your credentials ready, copy the API key and save it in a note
 
 ![](/screenshots/Picture6.png?raw=true)
  
-Now go back to "Manage" in the left side menu and open the Visual Recognition Tool (Beta) by clicking on the green button.  This will open a new tab in your browser.  Click on API Key and enter the credentials you copied in the previous stage.
+Now let's access the Visual Recognition Tool by entering the following URL in a new tab:
+ 
+ https://watson-visual-recognition.ng.bluemix.net/
+
+Click on API Key and enter the credentials you copied in the previous stage.
 
 ![](/screenshots/Picture7.png?raw=true)
  
