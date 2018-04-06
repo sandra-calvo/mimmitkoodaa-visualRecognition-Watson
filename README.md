@@ -228,11 +228,15 @@ Import the flow by simply clickcing on the 3 white lines on the top right corner
 
 ![](/screenshots/Picture27.png?raw=true)
  
-This will create the missing part shown in the first picture of this section. You will need to do some editing on few nodes, because credentials are not transferred with the rest of the code. 
 
-Edit the Visual Recognition nodes with your own credentials (API Key). 
+Now your flow should look like this:
 
-Now feel free to find you own images and add them to the different inject nodes to classify images.
+![](/screenshots/Picture21c.png?raw=true)
+
+You will need to do some editing on few nodes, because credentials are not transferred with the rest of the code. 
+Edit the purple Visual Recognition nodes with your own credentials (API Key). 
+
+Feel free to find you own images and add them to the different inject nodes to classify images.
  
 ## Step 5. Test your customized classifier
 Same way you imported the code in the previous step, copy the following text and import it in Node-RED. In this case use **mimmitkoodaa_customClassifier_flow.txt**
