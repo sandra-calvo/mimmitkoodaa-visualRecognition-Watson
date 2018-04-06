@@ -247,7 +247,9 @@ We should have the next flow:
  
 This flow takes a picture and runs it through the custom classifier created in Step 2. If it finds a match it will tell us what Watson sees in the picture, if it can't find a match it will print a message saying that. 
 
-Remember you will need to edit the credentials in the Visual Recognition node and write your own ID in the function "Define the classifier ID".
+Remember you will need to edit the flow: 
+    - Add your credentials to the Visual Recognition node 
+    - Write your own classifier ID in the function "Define the classifier ID"
 
 Your classifier ID can be found in the Visual Recognition Tool: (Do not use the ID shown in the picture)
 
