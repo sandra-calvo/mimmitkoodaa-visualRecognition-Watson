@@ -180,12 +180,13 @@ Note: If you get an "Authorization denied" message when deploying your applicati
 ## Step 4. Build your Node-RED flow to classify images
 This is the flow we are going to build in this step to test the visual recognition capabilities:
 
-![](/screenshots/Picture21.png?raw=true)
+![](/screenshots/Picture21b.png?raw=true)
  
 Locate the inject node under the input section in the palette window.  
 The inject node is simply a node to send a message (string, timestamp etc) through your flow.
 
-1.	Drag the node onto the workspace in the middle of the screen. Double click on the inject node to configure the node. Change the payload to be a string, and add a direct link to an image you would like to analyze. For example: https://www.thesun.co.uk/wp-content/uploads/2017/06/nintchdbpict0002407806071.jpg?strip=all&w=960 
+1.	Drag the node onto the workspace in the middle of the screen. Double click on the inject node to configure the node. Change the payload to be a string, and add a direct link to an image you would like to analyze. 
+For example: https://www.thesun.co.uk/wp-content/uploads/2017/06/nintchdbpict0002407806071.jpg?strip=all&w=960 
 
 ![](/screenshots/Picture22.png?raw=true)
  
@@ -212,15 +213,13 @@ msg.payload="Watson says that is a/an: \n ";
 5.	To see the results of the image analysis in the debug tab add a debug node. This node doesn't need any configuring. 
 
 6.	The flow is now complete. Make sure that all nodes are connected then click 'Deploy' in the top right corner on the screen.  
-7.	The  flow should now look like this.
-
-![](/screenshots/Picture24.png?raw=true)
  
 Click the button to the right of the inject node. To see the results of the analysis, take a look at the debug tab. 
 
 ![](/screenshots/Picture25.png?raw=true)
  
 In order to make the lab easier we are going to import the rest of the code. 
+
 You can get the complete Node-RED flow from the **mimmitkoodaa_visualRecognition_flow.txt**.
 
 Import the flow by simply clickcing on the 3 white lines on the top right corner of the Node-RED window.  Import - Clipboard - and paste the text you copied from above. 
@@ -233,7 +232,7 @@ This will create the missing part shown in the first picture of this section. Yo
 
 Edit the Visual Recognition nodes with your own credentials (API Key). 
 
-Now feel free to find you own images and add them to the different inject nodes to either classify the image, recognize the text in and image or detect faces. 
+Now feel free to find you own images and add them to the different inject nodes to classify images.
  
 ## Step 5. Test your customized classifier
 Same way you imported the code in the previous step, copy the following text and import it in Node-RED. In this case use **mimmitkoodaa_customClassifier_flow.txt**
@@ -270,6 +269,10 @@ Same way you imported the code in the previous steps, copy the following text an
 We added the UI flow:
 
  ![](/screenshots/Picture30.png?raw=true)
+ 
+ You will need to add to the visual recognition nodes your own API Key. 
+ 
+ And also your own classifier ID to the node named custom. 
  
  ## Step 7. Check your webapp! 
 The dashboard nodes added an UI to our Node-RED application. To access the UI go to:
