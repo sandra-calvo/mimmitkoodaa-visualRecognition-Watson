@@ -248,8 +248,8 @@ We should have the next flow:
 This flow takes a picture and runs it through the custom classifier created in Step 2. If it finds a match it will tell us what Watson sees in the picture, if it can't find a match it will print a message saying that. 
 
 Remember you will need to edit the flow: 
-    - Add your credentials to the Visual Recognition node 
-    - Write your own classifier ID in the function "Define the classifier ID"
+- Add your credentials to the Visual Recognition node 
+- Write your own classifier ID in the function "Define the classifier ID"
 
 Your classifier ID can be found in the Visual Recognition Tool: (Do not use the ID shown in the picture)
 
@@ -261,9 +261,15 @@ Edit the blue timestamp/inject node with the image URL you want to run through t
 ## Step 6. Create your webapp (UI)
 First we will add some new nodes to our palette. 
 
-In the Node-RED window click on the three lines on the top right corner and in the menu, click on the "Manage palette". This will open the node menu where you can add new nodes to your application. You will see the nodes that are installed by default and if you go to the 'install' tab you can search for any node package and add it directly to your app.
-                  
+In the Node-RED window click on the three lines on the top right corner and in the menu, click on the "Manage palette". 
+This will open the node menu where you can add new nodes to your application. 
 
+ ![](/screenshots/Picture21d.png?raw=true)
+ 
+You will see the nodes that are installed by default and if you go to the 'install' tab you can search for any node package and add it directly to your app.
+                  
+ ![](/screenshots/Picture21e.png?raw=true)
+ 
 Search for the dashboard nodes by writing 'dashboard'. This will return multiple node packages, you need to install the package 'node-red-dashboard'. Find it in the search results and click on install. 
 
 This will prompt a window to confirm the installation. Click on install and wait few minutes, the application may require a restart. Click "Done" to close the left side menu. 
